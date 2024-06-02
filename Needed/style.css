@@ -1,80 +1,207 @@
+/* GLOBAL */
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+#NAV {
+    background: transparent;
+    font-family: 'Minecraft';
+    border-bottom: 2px solid var(--primary-color);
+    box-shadow: 0 0 6px var(--primary-color);
+}
+
+#NDIV {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#LOGO {
+    width: 75px;
+    margin: 10px;
+    transition: transform 600ms;
+    border-radius: 80px;
+    box-shadow: 0 0 3px var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+#LOGO:hover {
+    transform: scale(1.1);
+    transition: transform 250ms;
+    box-shadow: 0 0 6px var(--primary-color);
+}
+
+#LOGO:active {
+    transform: scale(1);
+    transition: transform 34ms;
+}
+
+#LINK {
+    list-style: none;
+    display: inline-block;
+}
+
+ul a {
+    font-size: 18px;
+    margin-right: 20px;
+    padding: 14px 16px;
+    border: 1px solid var(--primary-color);
+    transition: 0.3s;
+    box-shadow: 0 0 3px var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 7.5px;
+}
+
+ul a:hover {
+    background: var(--primary-color);
+    transition: 0.3s;
+    color: black;
+    box-shadow: 0 0 6px var(--primary-color);
+}
+
+h1 {
+    color: var(--primary-color);
+    font-family: 'Minecraft';
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 100px;
+    text-shadow: 0 0 3px var(--primary-color);
+    text-decoration: none;
+}
+
+.CONTEXT {
+    position: absolute;
+    text-align: center;
+    background: black;
+    border: 1px solid var(--primary-color);
+    list-style: none;
+    box-shadow: 0 0 3px var(--primary-color);
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.CONTEXT ol {
+    padding: 0px;
+    margin: 0px;
+    width: 150px;
+    list-style: none;
+}
+
+.CONTEXT ol li {
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.CONTEXT ol li:hover {
+    background: var(--primary-color);
+    cursor: pointer;
+    transition: 0.3s;
+    color: black;
+}
+
+.CONTEXT ol a {
+    text-decoration: none;
+    font-family: 'Minecraft';
+    transition: 0.3s;
+}
+
+#ROUND1 {
+    border-radius: 10px 10px 0 0;
+}
+
+#ROUND2 {
+    border-radius: 0 0 10px 10px;
+}
+
 /*BUTTON*/
 
 .pushable {
-background: #6e006e;
-border: none;
-border-radius: 12px;
-padding: 0;
-cursor: pointer;
+    background: #6e006e;
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
 }
+
 .pushable a {
-text-decoration: none;
+    text-decoration: none;
 }
+
 .front {
-display: flex;
-padding: 12px 60px;
-border-radius: 12px;
-font-size: 17.5px;
-font-family: 'Minecraftia';
-background: magenta;
-color: black;
-transform: translateY(-4px);
+    display: flex;
+    padding: 12px 60px;
+    border-radius: 12px;
+    font-size: 17.5px;
+    font-family: 'Minecraftia';
+    background: var(--primary-color);
+    color: black;
+    transform: translateY(-4px);
 }
+
 .pushable:active .front {
-transform: translateY(-2px);
+    transform: translateY(-2px);
 }
+
 .pushable:focus:not(:focus-visible) {
-outline: none;
+    outline: none;
 }
+
 .front {
-transition: transform 600ms;
-cubic-bezier(.3, .7, .4, 1);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
 }
+
 .pushable:hover .front {
-transform: translateY(-6px);
-transition: transform 250ms;
-cubic-bezier(.3, .7, .4, 1.5);
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
+
 .pushable:active .front {
-transform: translateY(-2px);
-transition: transform 34ms;
+    transform: translateY(-2px);
+    transition: transform 34ms;
 }
 
 /*LOADER*/
 
 .loader {
-position: fixed;
-top: 0;
-left: 0;
-width: 100vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: black;
-transition: opacity 1s, visibility 0.9s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    transition: opacity 1s, visibility 0.9s;
 }
 
 .loader-hidden {
-opacity: 0;
-visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .loader::after {
-content: "";
-width: 75px;
-height: 75px;
-border: 5px solid black;
-border-top-color: magenta;
-border-radius: 50%;
-animation: loading 0.75s ease infinite;
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 5px solid black;
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
 }
 
 @keyframes loading {
-from{
-transform: rotate(0turn);
-}
-to{
-transform: rotate(1turn);
-}
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
 }
