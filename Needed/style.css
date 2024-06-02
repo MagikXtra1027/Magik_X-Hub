@@ -119,6 +119,73 @@ h1 {
     border-radius: 0 0 10px 10px;
 }
 
+#BIOPIC {
+    width: 200px;
+    border-radius: 250px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 6px var(--primary-color);
+}
+
+#BIOTEXT {
+    font-size: 18px;
+    color: var(--primary-color);
+    font-family: 'Minecraftia';
+    text-align: center;
+    width: 55%;
+}
+
+#DESC {
+    font-size: 18px;
+    color: var(--primary-color);
+    font-family: 'Minecraftia';
+    text-align: center;
+    width: 55%;
+}
+
+#SEARCH input {
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 3px var(--primary-color);
+    height: 30px;
+    width: 50%;
+    background-color: black;
+    border-radius: 15px;
+    font-family: 'Minecraftia';
+    text-align: center;
+    color: var(--primary-color);
+}
+
+::placeholder {
+    color: var(--primary-color);
+}
+
+.RESULTS {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.RESULTS li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.RESULTS a {
+    text-decoration: none;
+    display: block;
+    font-family: 'Minecraftia';
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 3px var(--primary-color);
+    padding: 7.5px;
+    border-radius: 7.5px;
+}
+
+#VIDIMG {
+    width: 200px;
+    border-radius: 7.5px;
+}
+
 /*BUTTON*/
 
 .pushable {
