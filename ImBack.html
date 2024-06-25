@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Magik_X, YouTube, Portfolio, Gaming">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Magik_X Hub | Video | I'm Back</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://github.com/MagikXtra1027/Magik_X-Hub/blob/main/I/LogoRounded.png?raw=true">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Needed/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="Needed/script.js" defer></script>
+
+    <style>
+        #VIDTITLE {
+            font-family: 'Minecraftia';
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 50px;
+        }
+        #VID {
+            border: 1px solid var(--primary-color);
+            border-radius: 20px;
+            transition: 0.3s;
+            box-shadow: 0 0 3px var(--primary-color);   
+        }
+        #VID:hover {
+            transition: 0.3;
+            transform: scale(1.01);
+        }
+        #SUBUTTON {
+            color: red;
+            background-color: black;
+            font-family: 'Minecraftia';
+            border: 1px solid red;
+            padding: 5px;
+            border-radius: 10px;
+            text-decoration: none;
+            padding-right: 8px;
+            padding-left: 8px;
+            transition: 0.3s;
+        }
+        #SUBUTTON:hover {
+            color: white;
+            background-color: red;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Loader-->
+    <div class="loader"></div>
+
+    <!--Context Menu-->
+    <div id="contextMenu" class="CONTEXT" style="display: none;">
+        <ol>
+            <a target="_blank" href="https://youtube.com/@Magik_X">
+                <li id="ROUND1"><i class="fa-brands fa-youtube"></i> YouTube</li>
+            </a>
+            <a target="_blank" href="https://mailto:MagikXPlayz@gmail.com">
+                <li><i class="fa-solid fa-envelope"></i> Contact</li>
+            </a>
+            <a href="friends.html">
+                <li><i class="fa-solid fa-user-group"></i> Friends</li>
+            </a>
+            <a href="downloads.html">
+                <li><i class="fa-solid fa-download"></i> Downloads</li>
+            </a>
+            <a href="settings.html">
+                <li id="ROUND2"><i class="fa-solid fa-gear"></i> Settings</li>
+            </a>
+        </ol>
+    </div>
+
+    <!--Navigation-->
+    <nav id="NAV">
+        <div id="NDIV">
+            <div><a href="index.html"><img id="LOGO" src="I/Logo.jpg"></a></div>
+            <ul>
+                <li id="LINK"><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li id="LINK"><a href="bio.html"><i class="fa-solid fa-book"></i> Bio</a></li>
+                <li id="LINK"><a href="videos.html"><i class="fa-solid fa-video"></i> Videos</a></li>
+                <li id="LINK"><a href="other.html"><i class="fa-solid fa-sliders"></i> Other</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Body-->
+    <br>
+    <br>
+    <h2 id="VIDTITLE">I'm Back</h2>
+    <center>
+        <iframe id="VID" width="700" height="393.75"
+        src="https://www.youtube.com/embed/JEq8WmfDVp0?si=KGmjGVFWUEpHBuhW" allowfullscreen></iframe>
+        <br>
+        <br>
+        <a id="SUBUTTON" target="_blank" href="https://www.youtube.com/watch?v=JEq8WmfDVp0">Watch, Like, Comment and Subscribe on YouTube</a>
+        <br>
+        <p id="DESC">If video quality is abnormal or low, please click the <i class="fa-solid fa-gear"></i> click 'Quality' and change the setting to your preferred quality.</p>
+    </center>
+
+    <!--Scripts-->
+    <script>
+        document.onclick = hideMenu;
+        document.oncontextmenu = rightClick;
+
+        function hideMenu() {
+            document.getElementById(
+                "contextMenu").style.display = "none"
+        }
+
+        function rightClick(e) {
+            e.preventDefault();
+
+            if (document.getElementById(
+                "contextMenu").style.display == "block")
+                hideMenu();
+            else {
+                var menu = document
+                    .getElementById("contextMenu")
+
+                menu.style.display = 'block';
+                menu.style.left = e.pageX + "px";
+                menu.style.top = e.pageY + "px";
+            }
+        } 
+    </script>
+</body>
+
+</html>
