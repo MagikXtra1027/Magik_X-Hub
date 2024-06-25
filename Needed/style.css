@@ -186,6 +186,12 @@ h1 {
     border-radius: 7.5px;
 }
 
+#SETTINGTITLE {
+    color: var(--primary-color);
+    text-align: center;
+    font-family: 'Minecraftia';
+}
+
 /*BUTTON*/
 
 .pushable {
